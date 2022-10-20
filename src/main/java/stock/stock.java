@@ -7,7 +7,6 @@ private int numberOfShares;
 private String account_Number;
 private String first_name;
 private String last_name;
-private 
 
 public String getCompanyName() {
     return companyName;
@@ -26,10 +25,12 @@ public int getNumberOfShares() {
 }
 
 public Stock(String companyName, String stockRating, int price, int numberOfShares) {
-    super();
     this.companyName = companyName;
     this.stockRating = stockRating;
     this.price = price;
     this.numberOfShares = numberOfShares;
 }
+}
+public static void main(String[] args) {
+    
 }
