@@ -1,36 +1,37 @@
 package stock;
-public class stock {
-public String companyName;
-private String stockRating;
-private int price;
-private int numberOfShares;
-private String account_Number;
-private String first_name;
-private String last_name;
+import org.json.simple.*;
+import org.json.simple.parser.JSONParser;
 
-public String getCompanyName() {
-    return companyName;
-}
+import org.json.simple.parser.ParseException;
 
-public String getStockRating() {
-    return stockRating;
-}
+public class Stock {
+    public String companyName;
+    private String stockRating;
+    private int price;
+    public String getCompanyName() {
+        return companyName;
+    }
 
-public int getPrice() {
-    return price;
-}
+    public String getStockRating() {
+        return stockRating;
+    }
 
-public int getNumberOfShares() {
-    return numberOfShares;
-}
+    public int getPrice() {
+        return price;
+    }
 
-public Stock(String companyName, String stockRating, int price, int numberOfShares) {
-    this.companyName = companyName;
-    this.stockRating = stockRating;
-    this.price = price;
-    this.numberOfShares = numberOfShares;
-}
-}
-public static void main(String[] args) {
-    
+    public int getNumberOfShares() {
+        return numberOfShares;
+    }
+
+    public Stock(String companyName, String stockRating, int price, int numberOfShares) {
+        this.companyName = companyName;
+        this.stockRating = stockRating;
+        this.price = price;
+        this.numberOfShares = numberOfShares;
+    }
+
+    public static void main(String[] args) {
+        
+    }
 }
