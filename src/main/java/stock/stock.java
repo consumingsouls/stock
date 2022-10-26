@@ -20,15 +20,15 @@ public class Stock {
         return price;
     }
 
-    public int getNumberOfShares() {
-        return numberOfShares;
-    }
+   //public int getNumberOfShares() {
+     //   return numberOfShares;
+   // }
 
     public Stock(String companyName, String stockRating, int price, int numberOfShares) {
         this.companyName = companyName;
         this.stockRating = stockRating;
         this.price = price;
-        this.numberOfShares = numberOfShares;
+       // this.numberOfShares = numberOfShares;
     }
 
     public static void main(String[] args) {

@@ -58,6 +58,20 @@ public class Account {
     }
     public void AddTransaction(Transaction transaction) {
         transactions.add(transaction);
+        switch(transaction.getType()){
+            case "Buy":
+            balance-= transaction.GetTotal();
+            numberOfShares += transaction.getShareCount();
+            break;
+            
+            
+            
+            case "Sell":
+             balance += transaction.GetTotal();
+            numberOfShares -= transaction.getShareCount();
+            break;
+
+        }
     }
 
 }
