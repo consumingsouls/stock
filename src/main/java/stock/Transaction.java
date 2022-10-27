@@ -23,8 +23,13 @@ public class Transaction {
         return sharePrice;
     }
     public double GetTotal() {
-        return (double) shareCount * sharePrice;
+        double Total = (double) shareCount * sharePrice;
+        Total = (double)((int)(Total * 100.0 + 0.5) / 100.0);
+        return Total;
     }
        
-    
+    @Override
+    public String toString() {
+        return type + "\t" + stockSymbol + "\t$" + sharePrice + "\t" + shareCount + "\t$" + GetTotal();
+    }
 }

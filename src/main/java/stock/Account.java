@@ -24,6 +24,9 @@ public class Account {
         this.numberOfShares = 0;
         transactions = new ArrayList<>();
     }
+    public int GetAccountNumber() {
+        return account_Number;
+    }
     public int GetNumberOfShares() {
         return numberOfShares;
     }
@@ -72,6 +75,26 @@ public class Account {
             break;
 
         }
+        balance = (double)((int)(balance * 100.0 + 0.5) / 100.0);
+    }
+    public String GetHtmlFileName() {
+
+        return GetAccountNumber() + "-" + GetFirst_Name() + "_" + GetLast_Name() + ".html";
+
+    }
+
+    @Override
+
+    public String toString() {
+        String result = "";
+        result += "Acount #: " + account_Number + "\n";
+        result += GetFullName() + "\t" + ssn + "\t" + email + "\t" + phoneNum + "\n";
+        for (Transaction t : transactions) {
+            result += t + "\n";
+        }
+        result += "Balance: $" + balance + "\tTotal Shares: " + numberOfShares;
+        return result;
+
     }
 
 }
